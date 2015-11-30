@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1e0c4571477bc9637173978c333be132.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="b2f-lA-UTE">
+                                <rect key="frame" x="93" y="159" width="180" height="162"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.99400529449999997" blue="0.45113310880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-uU-cq8">
+                                <rect key="frame" x="111" y="383" width="178" height="104"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.99400529449999997" blue="0.45113310880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="uwa-XB-wvJ" kind="show" identifier="EditLlamaInfoSegue" id="4pE-KH-tCF">
+                                        <segue key="commit" inheritsFrom="parent" id="T21-M6-0lT"/>
+                                        <segue key="preview" inheritsFrom="commit" id="K5s-km-dde"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SA8-aM-hcs"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="previewButton" destination="Odj-uU-cq8" id="Obf-Bi-DnR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149.5" y="364.5"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Bh1-LF-Ksh">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="uwa-XB-wvJ" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bSC-VY-mvJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="RHE-jK-s57"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="84K-vb-2eF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1e0c4571477bc9637173978c333be132.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kTv-Cl-laj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RHE-jK-s57" firstAttribute="top" secondItem="kTv-Cl-laj" secondAttribute="bottom" id="3iW-pg-sMk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kTv-Cl-laj" secondAttribute="trailing" constant="-20" id="SxM-2O-KQq"/>
+                            <constraint firstItem="kTv-Cl-laj" firstAttribute="leading" secondItem="84K-vb-2eF" secondAttribute="leadingMargin" constant="-20" id="nwX-Nx-aBf"/>
+                            <constraint firstItem="kTv-Cl-laj" firstAttribute="top" secondItem="bSC-VY-mvJ" secondAttribute="bottom" id="zAT-hx-Ro9"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Fu-nJ-bTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855.5" y="-33.5"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="bTy-s4-6Md">
+            <objects>
+                <viewController id="SbI-nO-RFC" userLabel="DetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ebs-9U-cEf"/>
+                        <viewControllerLayoutGuide type="bottom" id="cnM-NW-RfZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="77I-l7-IW7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyr-4f-WzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855.5" y="775.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1e0c4571477bc9637173978c333be132.jpg" width="720" height="720"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4pE-KH-tCF"/>
+    </inferredMetricsTieBreakers>
+</document>
